@@ -8,11 +8,13 @@ class BooksController < ApplicationController
     @users = User.all
     @book_comments = BookComment.all
     @book_comment = BookComment.new
+    @call = "show"
   end
 
   def index
     @book = Book.new
     @books = Book.all #一覧表示するためにBookモデルの情報を全てくださいのall
+    @call = "index"
   end
 
   def create
